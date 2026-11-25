@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="primaryRing" x1="6" y1="6" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4f46e5" />
+      <stop offset="1" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="accentArrow" x1="18" y1="18" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f43f5e" />
+      <stop offset="1" stop-color="#fb923c" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+  <path d="M24 10C16.268 10 10 16.268 10 24C10 27.534 11.31 30.76 13.484 33.218" stroke="url(#primaryRing)" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M20 9L25 10L23 15" stroke="url(#primaryRing)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M24 38C31.732 38 38 31.732 38 24C38 20.466 36.69 17.24 34.516 14.782" stroke="url(#accentArrow)" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M28 39L23 38L25 33" stroke="url(#accentArrow)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="24" cy="24" r="3" fill="#4f46e5" />
+</svg>
