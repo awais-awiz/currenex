@@ -3,6 +3,7 @@ import BrandLogo from "./components/BrandLogo";
 import CurrencyConverter from "./components/CurrencyConverter";
 import Watchlist from "./components/Watchlist";
 import ConversionHistory from "./components/ConversionHistory";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const VIEWS = [
@@ -87,12 +88,9 @@ export default function App() {
             <ConversionHistory history={logs} onClearHistory={handleClearLogs} />
           )}
         </main>
-
-        <footer className="footer-bar">
-          <span>Rates via ECB & Interbank feeds. Updated minutely.</span>
-          <span>Decimal.js Engine</span>
-        </footer>
       </div>
+
+      <Footer />
     </div>
   );
 }
