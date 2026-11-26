@@ -30,8 +30,8 @@ A modern, frontend-only foreign exchange platform built with **React 19** and **
 
 ```bash
 # Clone the repository
-git clone https://github.com/awais-awiz/currency-converter-react.git
-cd currency-converter-react
+git clone https://github.com/awais-awiz/currenex.git
+cd currenex
 
 # Install dependencies
 npm install
