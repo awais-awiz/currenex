@@ -159,37 +159,53 @@ input {
 }
 
 /* =========================================
-   HERO BANNER SECTION
+   HERO BANNER SECTION (BRAND COLORFUL)
    ========================================= */
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-card);
+  background: linear-gradient(125deg, #1e1b4b 0%, #4338ca 42%, #7c3aed 76%, #e11d48 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
   padding: 32px 36px;
   overflow: hidden;
-  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 14px 32px -8px rgba(79, 70, 229, 0.35), 0 4px 12px -2px rgba(244, 63, 94, 0.18);
+  color: #ffffff;
 }
 
-.hero-bg-graphic {
+.hero-glow {
   position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 320px;
-  height: 220px;
+  border-radius: 50%;
+  filter: blur(55px);
   pointer-events: none;
   z-index: 0;
 }
 
-.hero-bg-graphic svg {
-  width: 100%;
-  height: 100%;
+.hero-glow-left {
+  width: 240px;
+  height: 240px;
+  top: -80px;
+  left: -60px;
+  background: rgba(79, 70, 229, 0.65);
+}
+
+.hero-glow-right {
+  width: 280px;
+  height: 280px;
+  bottom: -100px;
+  right: -40px;
+  background: rgba(251, 146, 60, 0.55);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  align-items: center;
+  gap: 24px;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -200,45 +216,47 @@ input {
   align-items: center;
   gap: 6px;
   width: fit-content;
-  background: var(--primary-light);
-  border: 1px solid rgba(79, 70, 229, 0.15);
-  color: var(--primary);
-  font-size: 0.74rem;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 4px 11px;
   border-radius: 999px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
 .hero-badge-icon {
-  color: var(--primary);
+  color: #fb923c;
 }
 
 .hero-title {
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 800;
-  color: var(--text-main);
-  line-height: 1.2;
+  color: #ffffff;
+  line-height: 1.15;
   letter-spacing: -0.6px;
 }
 
 .hero-title-accent {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #fed7aa 0%, #fb923c 50%, #fda4af 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 0.88rem;
-  color: var(--text-muted);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.86);
   line-height: 1.55;
+  max-width: 500px;
   margin-bottom: 4px;
 }
 
 .hero-highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   padding-top: 4px;
 }
 
@@ -246,22 +264,48 @@ input {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 8px;
-  padding: 5px 10px;
-  font-size: 0.74rem;
+  padding: 6px 11px;
+  font-size: 0.73rem;
   font-weight: 600;
-  color: var(--text-main);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  color: #ffffff;
+}
+
+.hero-pill-icon {
+  color: #fed7aa;
 }
 
 .live-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #16a34a;
-  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.3);
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-illustration {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(15, 23, 42, 0.25));
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -269,10 +313,7 @@ input {
     padding: 24px 20px;
   }
   .hero-title {
-    font-size: 1.45rem;
-  }
-  .hero-bg-graphic {
-    display: none;
+    font-size: 1.55rem;
   }
 }
 
