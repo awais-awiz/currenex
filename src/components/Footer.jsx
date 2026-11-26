@@ -1,6 +1,6 @@
 import React from "react";
 import BrandLogo from "./BrandLogo";
-import { ShieldCheck, Activity, Github } from "lucide-react";
+import { ShieldCheck, Activity } from "lucide-react";
 
 export default function Footer() {
   return (
