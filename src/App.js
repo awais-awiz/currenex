@@ -3,6 +3,7 @@ import BrandLogo from "./components/BrandLogo";
 import CurrencyConverter from "./components/CurrencyConverter";
 import Watchlist from "./components/Watchlist";
 import ConversionHistory from "./components/ConversionHistory";
+import CurrencyTicker from "./components/CurrencyTicker";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -14,7 +15,7 @@ const VIEWS = [
 
 export default function App() {
   const [activeView, setActiveView] = useState("converter");
-  const [currentPair] = useState({ from: "USD", to: "EUR" });
+  const [currentPair, setCurrentPair] = useState({ from: "USD", to: "EUR" });
   const [logs, setLogs] = useState(() => {
     try {
       const saved = localStorage.getItem("app_audit_logs");
@@ -71,6 +72,13 @@ export default function App() {
 
       {/* Main Content */}
       <div className="main-wrapper">
+        <CurrencyTicker
+          onSelectPair={(from, to) => {
+            setCurrentPair({ from, to });
+            setActiveView("converter");
+          }}
+        />
+
         <main className="content-area">
           {activeView === "converter" && (
             <CurrencyConverter

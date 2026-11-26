@@ -21,6 +21,11 @@ export default function CurrencyConverter({
   const [copied, setCopied] = useState(false);
   const [comparisons, setComparisons] = useState([]);
 
+  useEffect(() => {
+    setFromCurrency(defaultFrom);
+    setToCurrency(defaultTo);
+  }, [defaultFrom, defaultTo]);
+
   const loadRates = useCallback(async (force = false, from = fromCurrency, to = toCurrency) => {
     setLoading(true);
     setError(null);
