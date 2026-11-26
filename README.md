@@ -1,61 +1,53 @@
-## 📫 Contact
+# Currenex — Real-Time Currency Exchange & Transfer Comparison
 
-Made with ❤️ by [Awais Arif](mailto:awaisariff004@gmail.com)
-# 💱 Currency Converter Web App
+A modern, frontend-only foreign exchange platform built with **React 19** and **Decimal.js**. Currenex combines live interbank benchmark rates, 20-digit arbitrary-precision banking arithmetic, and a cross-border remittance comparison engine that exposes upfront fees and hidden FX markups.
 
-A simple and responsive currency converter built with **React.js**. It fetches real-time exchange rates and displays currency conversion with country flags.
-
----
-
-## 🚀 Live Demo
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen?style=for-the-badge)](https://currencyconverter-app0398.netlify.app/)
-
-
----
-## 🌍 Live Exchange Rate Conversion
-
-- 🌐 Convert any amount from one currency to another
-- 🇺🇸 Country flags auto-update with selected currencies
-- 🔄 Swap currencies instantly
-- 📱 Fully responsive design (mobile-friendly)
-- 🎨 Stylish glassmorphism UI with custom fonts
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Currenex-4f46e5?style=for-the-badge)](https://currencyconverter-app0398.netlify.app/)
 
 ---
 
-## 🚀 Tech Stack
+## Key Features
 
-- **React.js**
-- **JavaScript (ES6)**
-- **CSS3 / Media Queries**
-- **ExchangeRate API**: [https://api.exchangerate-api.com](https://api.exchangerate-api.com)
-- **Country Flags**: [https://countryflagsapi.com](https://countryflagsapi.com) *(updated from flagsapi.com)*
-
----
-
-## 🖥️ Screenshots
-
-| Desktop | Mobile |
-|--------|--------|
-| ![Desktop View](./public/Desktopview.png) | ![Mobile View](./public/Mobileview.png) |
-
----
-## ✨ Features
-
-- Real-time currency conversion using ExchangeRate API
-- Intuitive country flag display
-- One-click currency swapping
-- Responsive design (mobile/tablet/desktop)
-- Modern UI with glassmorphism effect
+- **Precision Financial Math (`Decimal.js`):** 20 significant digits with `ROUND_HALF_UP` banker's rounding — zero IEEE-754 floating-point drift.
+- **Resilient Live FX Feeds:** Primary [ExchangeRate-API](https://api.exchangerate-api.com) with automatic failover to [Open.er-api](https://open.er-api.com), `AbortController` timeouts, and 1-hour localStorage caching with offline stale-cache fallback.
+- **Cross-Border Provider Comparison:** Compares estimated recipient payouts, upfront fees, and hidden FX spreads across Wise, Remitly Express, Western Union, and traditional banks.
+- **Interactive Benchmark Ticker & Conversion Matrix:** Quick-switch major corridors (`EUR/USD`, `GBP/USD`, `USD/JPY`, `USD/PKR`, etc.) and two-way denomination reference tables.
+- **Multi-Currency Watchlist & Audit History:** Track custom currency portfolios and maintain a local conversion log.
+- **Resilient Vector Flags:** 3-tier fallback (`jsDelivr` SVG flags → `FlagCDN` PNG → crisp currency code badges).
 
 ---
 
+## Tech Stack
+
+- **React 19** (JavaScript ES6+)
+- **Decimal.js** (Arbitrary-precision decimal arithmetic)
+- **Lucide React** (Iconography)
+- **Jest & React Testing Library** (Unit tests for financial math, provider calculations, and UI)
+
+---
+
+## Getting Started
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/currency-converter-app.git
+git clone https://github.com/awais-awiz/currency-converter-react.git
+cd currency-converter-react
 
 # Install dependencies
 npm install
 
 # Start the development server
 npm start
+
+# Run unit tests
+npm test
+
+# Create a production build
+npm run build
+```
+
+---
+
+## Contact
+
+Built by [Awais Arif](mailto:awaisariff004@gmail.com)
