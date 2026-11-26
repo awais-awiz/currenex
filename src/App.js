@@ -4,6 +4,7 @@ import CurrencyConverter from "./components/CurrencyConverter";
 import Watchlist from "./components/Watchlist";
 import ConversionHistory from "./components/ConversionHistory";
 import CurrencyTicker from "./components/CurrencyTicker";
+import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -72,6 +73,8 @@ export default function App() {
 
       {/* Main Content */}
       <div className="main-wrapper">
+        <HeroSection />
+
         <CurrencyTicker
           onSelectPair={(from, to) => {
             setCurrentPair({ from, to });
