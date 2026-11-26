@@ -68,9 +68,9 @@ input {
 }
 
 .navbar-container {
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 14px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,10 +136,10 @@ input {
    MAIN LAYOUT
    ========================================= */
 .main-wrapper {
-  max-width: 860px;
+  max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  padding: 28px 20px 48px;
+  padding: 24px 20px 48px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1173,7 +1173,7 @@ input {
 }
 
 .footer-container {
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 16px 20px;
 }
@@ -1268,5 +1268,150 @@ input {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+}
+
+/* =========================================
+   TWO-WAY QUICK CONVERSION MATRIX
+   ========================================= */
+.quick-matrix-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.matrix-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.matrix-sub {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.matrix-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.matrix-col-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.matrix-table th {
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.matrix-table th:last-child,
+.matrix-table td:last-child {
+  text-align: right;
+}
+
+.matrix-table td {
+  padding: 8px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.matrix-table tr:hover td {
+  background: var(--bg-subtle);
+}
+
+.matrix-amt {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.matrix-res {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* =========================================
+   MARKET STATS STRIP
+   ========================================= */
+.market-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.stat-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+@media (max-width: 640px) {
+  .matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .market-stats-strip {
+    grid-template-columns: 1fr;
   }
 }

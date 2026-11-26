@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { ArrowLeftRight, Copy, Check, RefreshCw, AlertCircle } from "lucide-react";
 import CurrencySelect from "./CurrencySelect";
 import TransferComparisonTable from "./TransferComparisonTable";
+import QuickMatrix from "./QuickMatrix";
+import MarketHighlights from "./MarketHighlights";
 import { fetchRates } from "../services/ratesService";
 import { calculateComparison } from "../services/comparisonService";
 import { convertAmount, calculateInverseRate, formatCurrencyDisplay } from "../utils/finance";
@@ -246,6 +248,16 @@ export default function CurrencyConverter({
         toCurrency={toCurrency}
         sendAmount={amount}
       />
+
+      {/* Two-Way Denomination Matrix */}
+      <QuickMatrix
+        fromCurrency={fromCurrency}
+        toCurrency={toCurrency}
+        rate={rate}
+      />
+
+      {/* Trust & Architecture Metrics */}
+      <MarketHighlights baseCurrency={fromCurrency} />
     </div>
   );
 }
