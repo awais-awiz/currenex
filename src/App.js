@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ArrowLeftRight, Globe, History } from "lucide-react";
 import BrandLogo from "./components/BrandLogo";
 import CurrencyConverter from "./components/CurrencyConverter";
 import Watchlist from "./components/Watchlist";
@@ -9,9 +10,9 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 const VIEWS = [
-  { id: "converter", label: "Converter" },
-  { id: "watchlist", label: "Watchlist" },
-  { id: "history", label: "History" },
+  { id: "converter", label: "Converter", Icon: ArrowLeftRight },
+  { id: "watchlist", label: "Watchlist", Icon: Globe },
+  { id: "history", label: "History", Icon: History },
 ];
 
 export default function App() {
@@ -41,17 +42,21 @@ export default function App() {
 
   return (
     <div className="app-layout">
-      {/* Minimal Top Header */}
+      {/* Enhanced Frosted Top Navbar */}
       <header className="navbar">
         <div className="navbar-container">
           <div className="brand-group">
-            <BrandLogo size={32} />
-            <span className="brand-title">Currenex</span>
+            <BrandLogo size={34} />
+            <span className="brand-title" aria-label="Currenex">
+              <span className="brand-part-primary">Curren</span>
+              <span className="brand-part-accent">ex</span>
+            </span>
           </div>
 
           <nav className="tab-bar" role="tablist">
             {VIEWS.map((tab) => {
               const isSelected = activeView === tab.id;
+              const TabIcon = tab.Icon;
               return (
                 <button
                   key={tab.id}
@@ -60,6 +65,7 @@ export default function App() {
                   className={`tab-btn ${isSelected ? "active" : ""}`}
                   onClick={() => setActiveView(tab.id)}
                 >
+                  <TabIcon size={14} className="tab-icon" />
                   <span>{tab.label}</span>
                   {tab.id === "history" && logs.length > 0 && (
                     <span className="counter-badge">{logs.length}</span>

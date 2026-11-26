@@ -10,7 +10,10 @@ export default function Footer() {
           <div className="footer-left">
             <div className="footer-brand">
               <BrandLogo size={22} />
-              <span className="footer-brand-name">Currenex</span>
+              <span className="footer-brand-name">
+                <span className="brand-part-primary">Curren</span>
+                <span className="brand-part-accent">ex</span>
+              </span>
             </div>
             <span className="footer-divider">•</span>
             <span className="footer-status-pill">

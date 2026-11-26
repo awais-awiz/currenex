@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles, ShieldCheck, Zap } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="hero-glow hero-glow-right" aria-hidden="true"></div>
 
       <div className="hero-inner">
-        {/* Left: Copy & Trust Signals */}
+        {/* Left: Clean Headline & Subtitle */}
         <div className="hero-content">
           <div className="hero-pill-badge">
             <Sparkles size={13} className="hero-badge-icon" />
@@ -22,23 +22,8 @@ export default function HeroSection() {
           </h1>
 
           <p className="hero-subtitle">
-            Live interbank rates, 20-digit precision math, and transparent cross-border provider fee comparisons.
+            Live interbank rates, precision math, and transparent cross-border provider comparisons.
           </p>
-
-          <div className="hero-highlights">
-            <div className="hero-stat-pill">
-              <span className="live-dot"></span>
-              <span>Live Interbank Feeds</span>
-            </div>
-            <div className="hero-stat-pill">
-              <Zap size={12} className="hero-pill-icon" />
-              <span>Decimal.js Precision</span>
-            </div>
-            <div className="hero-stat-pill">
-              <ShieldCheck size={12} className="hero-pill-icon" />
-              <span>0% Hidden Markups</span>
-            </div>
-          </div>
         </div>
 
         {/* Right: Custom Brand-Matched Vector Visual */}
@@ -74,7 +59,7 @@ export default function HeroSection() {
               strokeDasharray="5 6"
             />
 
-            {/* Interlocking Brand Logo Curves (Scaled Up) */}
+            {/* Interlocking Brand Logo Curves */}
             <path
               d="M145 36C106.892 36 76 66.892 76 105C76 122.4 82.45 138.3 93.15 150.4"
               stroke="url(#heroRingPrimary)"
